@@ -2,13 +2,15 @@ CREATE DATABASE IF NOT EXISTS DAZZART;
 USE DAZZART;
 CREATE TABLE usuario(
 id_usuario INT auto_increment primary KEY,
-nombre_cliente varchar(255) NOT NULL,
+nombre varchar(255) NOT NULL,
+nombre_usuario varchar(255) NOT NULL,
+correo_electronico varchar(255) NOT NULL,
+telefono varchar (255) NOT NULL,
 contrasena varchar(255) NOT NULL,
-contrasena_encriptada varchar (255) NOT NULL,
+cedula varchar(255) NOT NULL,
 direccion varchar(255) NOT NULL ,
-rol ENUM('admin', 'normal') NOT NULL
+rol ENUM('admin', 'cliente') NOT NULL
 );
-
 
 
 CREATE TABLE factura(
